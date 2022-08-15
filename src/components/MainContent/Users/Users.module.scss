@@ -1,0 +1,112 @@
+.users_container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 87.5px 60px;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+
+  h1 {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    margin: 10px 0 32px;
+  }
+
+  .users_section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 29px;
+    grid-row-gap: 29px;
+
+    .user_block {
+      width: 100%;
+      background-color: #ffffff;
+      padding: 36px 30px 0;
+      height: 313px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      min-width: -webkit-fill-available;
+      overflow: hidden;
+
+      img {
+        width: 70px;
+        height: 70px;
+        background-color: #ffffff;
+        border-radius: 50%;
+      }
+
+      .user_name {
+        margin: 15px 0 4px;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 28px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .user_email,
+      .user_phone,
+      .user_position {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+      }
+
+      .user_email,
+      .user_name {
+        cursor: pointer;
+      }
+    }
+  }
+
+  button {
+    margin: 50px 0 0;
+  }
+}
+
+.tooltip {
+  background-color: #232F34 !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+  margin: 5px 0 0 0 !important;
+
+  &:after {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .users_container {
+    padding: 87.5px 32px;
+
+    .users_section {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .users_container {
+    padding: 72.5px 16px;
+
+    .users_section {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 20px;
+    }
+  }
+}

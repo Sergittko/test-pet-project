@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useLayoutEffect, useState } from 'react';
+import Header from './components/Header/Header';
+import Description from './components/MainContent/Description/Description';
+import Info from './components/MainContent/Info/Info';
+import UserContainer from './components/MainContent/Users/UserContainer';
+import RegistrationContainer from './components/MainContent/Registration/RegistrationContainer';
+import Footer from './components/Footer/Footer';
+import style from './App.module.css';
 
-function App() {
+function App(props) {
+  const [width, setWidth] = useState(null);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.app_container}>
+      <div className={style.header}>
+        <Header width={width}/>
+      </div>
+      <div className={style.main_section}>
+        <div className={style.descriptionContainer}>
+          <Description width={width}/>
+        </div>
+        <Info width={width}/>
+        <UserContainer width={width}/>
+        <RegistrationContainer />
+      </div>
+      <div className="footer">
+        <Footer />
+      </div>
     </div>
   );
 }

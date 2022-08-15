@@ -1,0 +1,52 @@
+.preloader_container {
+  padding: 100px 0 0 0;
+  width: 100%;
+  position: relative;
+
+  .preloader {
+    width: 48px;
+    height: 48px;
+    margin: -24px 0 0 -24px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    // transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border-top: 5px solid #00BDD3;
+    border-right: 5px solid #00BDD3;
+    border-bottom: 5px solid #00BDD3;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    animation: rotation 0.5s infinite linear;
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 5px;
+      height: 5px;
+      background: #00BDD3;
+      border-radius: 45%;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 3px;
+      width: 5px;
+      height: 5px;
+      background: #00BDD3;
+      border-radius: 45%;
+    }
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
