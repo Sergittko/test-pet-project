@@ -49,7 +49,7 @@ const Registration = props => {
   let [modal, changeModalDisplay] = useState(false);
   let onSubmit = (formData, form) => {
     props.saveNewUserTh(props.token, {...formData, photo: fileName}, props.count)
-    .then(resp => { if(!resp) {changeModalDisplay(true); form.reset()}})
+    .then(resp => { if(resp) {changeModalDisplay(true); form.reset()}})
   }
 
   return (
