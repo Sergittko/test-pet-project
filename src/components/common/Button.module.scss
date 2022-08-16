@@ -16,6 +16,7 @@
   cursor: pointer;
   color: #000;
   z-index: 1;
+  -webkit-tap-highlight-color: transparent;
 
   &:after {
     content: '';

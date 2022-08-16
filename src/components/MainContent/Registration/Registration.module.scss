@@ -153,6 +153,11 @@
       right: 0;
       bottom: 0;
     }
+
+    a {
+      display: block;
+      margin: 0 -13px;
+    }
   }
 
   &:after {
@@ -333,7 +338,7 @@ $blue: #00BDD3;
     bottom: -20px;
     left: 15px;
     font-size: 12px;
-    color: red;
+    color: #CB3D40;
   }
 }
 

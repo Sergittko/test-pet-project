@@ -1,6 +1,7 @@
 import style from './Registration.module.scss';
 import {useState, useEffect} from 'react';
 import Button from '../../common/Button';
+import {Link} from 'react-scroll';
 import { Form, Field } from 'react-final-form';
 import { connect } from "react-redux";
 import { saveNewUserTh } from '../../../redux/users_reducer';
@@ -47,7 +48,7 @@ const Registration = props => {
   let [fileName, changeFileName] = useState('Upload your photo');
   let [fileNameChanged, isFileNameChanged] = useState(false);
   let [modal, changeModalDisplay] = useState(false);
-
+  
   useEffect(() => {
     if (modal) document.body.style.overflow = 'hidden';
     if (!modal) document.body.style.overflow = 'unset';
@@ -155,8 +156,12 @@ const Registration = props => {
         <div className={style.modal_container}>
           <h1>Congratulations</h1>
           <p>You have successfully passed the registration</p>
-          <div onClick={()=>changeModalDisplay(false)}>
-            <Button text={'Great'}/>
+          <div>
+            <Button onClick={()=>changeModalDisplay(false)} text={
+              <Link onClick={()=>changeModalDisplay(false)} to={'users'} smooth={true} offset={-60} duration={500}>
+                Great
+              </Link>
+            }/>
           </div>
         </div>
       </div> : null}
