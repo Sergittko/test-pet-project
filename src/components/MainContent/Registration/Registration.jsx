@@ -1,5 +1,5 @@
 import style from './Registration.module.scss';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Button from '../../common/Button';
 import { Form, Field } from 'react-final-form';
 import { connect } from "react-redux";
@@ -47,6 +47,12 @@ const Registration = props => {
   let [fileName, changeFileName] = useState('Upload your photo');
   let [fileNameChanged, isFileNameChanged] = useState(false);
   let [modal, changeModalDisplay] = useState(false);
+
+  useEffect(() => {
+    if (modal) document.body.style.overflow = 'hidden';
+    if (!modal) document.body.style.overflow = 'unset';
+  }, [modal])
+
   let onSubmit = (formData, form) => {
     props.saveNewUserTh(props.token, {...formData, photo: fileName}, props.count)
     .then(resp => { if(resp) {changeModalDisplay(true); form.reset()}})
@@ -138,7 +144,7 @@ const Registration = props => {
             <span className={`${style.span_text} ${fileNameChanged ? style.fileNameChanged : null}`} id="file_name">{fileNameChanged ? fileName.name: fileName}</span>
           </div>
           <div>
-            <Button onClick={()=>changeModalDisplay(false)} text={'Sign up'}/>
+            <Button text={'Sign up'}/>
           </div>
         </form>
       )}

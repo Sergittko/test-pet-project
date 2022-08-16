@@ -55,3 +55,17 @@
     background-position: bottom;
   }
 }
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f8f8f8;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00bdd3;
+  border-radius: 20px;
+  border: 2px solid #f8f8f8;
+}

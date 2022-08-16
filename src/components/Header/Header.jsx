@@ -1,7 +1,7 @@
 import style from './Header.module.scss';
 import logo from '../../img/Logo.svg';
 import menu from '../../img/Menu.svg';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link} from 'react-scroll';
 
 const menuItems = [
@@ -93,6 +93,12 @@ const menuItems = [
 ];
 const Header = props => {
   const [menuActive, setMenuActive] = React.useState(false);
+
+  useEffect(() => {
+    if (menuActive) document.body.style.overflow = 'hidden';
+    if (!menuActive) document.body.style.overflow = 'unset';
+  }, [menuActive])
+
   let slideIn = () => setTimeout(() => setMenuActive(false), 400);
 
   return (
