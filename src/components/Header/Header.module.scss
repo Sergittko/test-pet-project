@@ -9,8 +9,13 @@
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
 
-  img {
+  .main_logo {
+    display: block;
     margin: auto 0;
+
+    img {
+      margin: auto 0;
+    }
   }
 
   ul {
@@ -61,9 +66,11 @@
       img {
         padding: 5px;
         border-radius: 50%;
+
         &:active {
           background-color: #e0e0e0;
         }
+
         &:hover {
           background-color: #e0e0e0;
         }

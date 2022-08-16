@@ -103,7 +103,9 @@ const Header = props => {
 
   return (
     <div className={style.header_container}>
-      <img src={logo} alt=""/>
+      <Link className={style.main_logo} to={'about_me'} smooth={true} offset={-60} duration={500}>
+        <img src={logo} alt=""/>
+      </Link>
       {props.width > 768 ?
         <div className={style.navigation}>
           <nav>

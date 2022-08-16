@@ -48,7 +48,7 @@ const Registration = props => {
   let [fileName, changeFileName] = useState('Upload your photo');
   let [fileNameChanged, isFileNameChanged] = useState(false);
   let [modal, changeModalDisplay] = useState(false);
-  
+
   useEffect(() => {
     if (modal) document.body.style.overflow = 'hidden';
     if (!modal) document.body.style.overflow = 'unset';
@@ -65,7 +65,7 @@ const Registration = props => {
       <h2>Your personal data is stored according to the Privacy Policy</h2>
 
       <Form onSubmit={onSubmit}>
-      {({ handleSubmit, visited })=>(
+      {({ handleSubmit, visited})=>(
         <form onSubmit={handleSubmit} className={style.registration_section}>
           <div className={style.input_container}>
             <div className={style.input_item}>
