@@ -110,14 +110,13 @@ const Header = props => {
         <div className={style.navigation}>
           <nav>
             <ul>
-            {menuItems.map(item => {
-                if(!item.burger){
+            {menuItems.filter(item => !item.burger).map(item => {
                   return (<li key={item.value}>
                     <Link to={item.addReactScroll.linkTo} activeClass={style.active} smooth={true} spy={true} offset={-60} duration={500}>
                       {item.value}
                     </Link>
                   </li>)
-                }})}
+              })}
             </ul>
           </nav>
         </div>
@@ -145,7 +144,7 @@ const Header = props => {
                   }else{
                     return (
                       <li key={item.value}>
-                        <a href="!#" onClick={()=>slideIn()}>{item.value}</a>
+                        <Link to={'about_me'} smooth={true} spy={true} offset={-60} duration={500} onClick={()=>slideIn()}>{item.value}</Link>
                       </li>
                     )
                   }}
