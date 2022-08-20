@@ -145,7 +145,7 @@ const Header = props => {
                   }else{
                     return (
                       <li key={item.value}>
-                        <a onClick={()=>slideIn()}>{item.value}</a>
+                        <a href="!#" onClick={()=>slideIn()}>{item.value}</a>
                       </li>
                     )
                   }}

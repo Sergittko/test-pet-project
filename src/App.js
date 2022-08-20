@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import Header from './components/Header/Header';
 import Description from './components/MainContent/Description/Description';
 import Info from './components/MainContent/Info/Info';

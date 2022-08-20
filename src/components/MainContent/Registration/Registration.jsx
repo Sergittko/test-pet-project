@@ -3,20 +3,14 @@ import {useState, useEffect} from 'react';
 import Button from '../../common/Button';
 import {Link} from 'react-scroll';
 import { Form, Field } from 'react-final-form';
-import { connect } from "react-redux";
-import { saveNewUserTh } from '../../../redux/users_reducer';
 import formatString from "format-string-by-pattern";
 
 const required = visited => value =>(visited && !value)? 'This field is requiered': undefined;
-const minValue = min => value => isNaN(value) || value >= min ? undefined : `Should start +380`;
-const nameLength = visited => value => ((60 < value?.length || value?.length < 2) && visited)? 'Name should be 2-60 characters' : undefined;
-
 const nameValidation = visited => value => {
   if (visited && !value) return 'This field is requiered';
   if (60 < value?.length || value?.length < 2) return 'Name should be 2-60 characters';
   return undefined;
 }
-
 const phoneValidation = visited => value => {
   if (visited && !value) return 'This field is requiered';
   if (visited && isNaN(value)) return 'Enter only numbers';
@@ -65,7 +59,7 @@ const Registration = props => {
       <h2>Your personal data is stored according to the Privacy Policy</h2>
 
       <Form onSubmit={onSubmit}>
-      {({ handleSubmit, visited})=>(
+      {({ handleSubmit, visited })=>(
         <form onSubmit={handleSubmit} className={style.registration_section}>
           <div className={style.input_container}>
             <div className={style.input_item}>
@@ -112,19 +106,19 @@ const Registration = props => {
           <div className={style.radio_container}>
             <p>Select your position</p>
             <span className={style.im_buttons}>
-              <label className={style.button, style.radio}>
+              <label className={style.button + ' ' + style.radio}>
                 <Field component="input" value='1' className={style.button} name="position_id" type="radio"/>
                 <span>Frontend developer</span>
               </label>
-              <label className={style.button, style.radio}>
+              <label className={style.button + ' ' + style.radio}>
                 <Field component="input" value='2' className={style.button} name="position_id" type="radio"/>
                 <span>Backend developer</span>
               </label>
-              <label className={style.button, style.radio}>
+              <label className={style.button + ' ' + style.radio}>
                 <Field component="input" value='4' className={style.button} name="position_id" type="radio"/>
                 <span>Designer</span>
               </label>
-              <label className={style.button, style.radio}>
+              <label className={style.button + ' ' + style.radio}>
                 <Field component="input" value='3' className={style.button} name="position_id" type="radio"/>
                 <span>QA</span>
               </label>
