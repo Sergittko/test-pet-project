@@ -19,28 +19,28 @@
   }
 
   ul {
-    list-style: none;
     padding: 0;
     margin: 0;
+    list-style: none;
   }
 
   .navigation {
-    text-align: center;
     margin: auto 0;
+    text-align: center;
 
     ul {
       display: flex;
 
       li {
         padding: 0 0 0 30px;
-        cursor: pointer;
         border-radius: 4px;
+        cursor: pointer;
 
         &:hover {
-          color: #00BDD3;
-          background-color: rgba(0, 189, 211, 0.1);
           padding: 7px 16px;
           margin: -7px -16px -7px 14px;
+          color: #00BDD3;
+          background-color: rgba(0, 189, 211, 0.1);
         }
 
         a {
@@ -87,40 +87,39 @@
     transition: 0.4s cubic-bezier(0, 1.09, 0.57, 1.01);
 
     .background {
-      backdrop-filter: brightness(0.5);
-      width: 101%;
-      height: 100vh;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 9999;
-      position: absolute;
+      width: 101%;
+      height: 100vh;
+      backdrop-filter: brightness(0.5);
     }
 
     nav {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #fff;
-      max-width: 270px;
+      z-index: 99999999;
       width: -webkit-fill-available;
+      max-width: 270px;
       height: 100vh;
       padding: 17px 16px;
       box-sizing: border-box;
       overflow-y: auto;
       overflow-x: hidden;
-      z-index: 99999999;
+      background-color: #fff;
       transition: 0.4s cubic-bezier(0, 1.09, 0.57, 1.01);
 
       div {
-        padding: 0 0 16px;
-        border-bottom: #e0e0e0 solid 1px;
         width: 300px;
         margin: 0 0 0 -20px;
+        padding: 0 0 16px;
+        border-bottom: #e0e0e0 solid 1px;
 
         img {
-          padding: 0 0 0 20px;
           display: block;
+          padding: 0 0 0 20px;
         }
       }
 
@@ -137,33 +136,33 @@
             position: absolute;
             bottom: 0;
             left: 0;
+            z-index: 7;
             display: block;
             width: 500px;
             height: 1px;
             margin: 0 0 -23px -70px;
             padding: 0;
-            background-color: #e0e0e0;
-            z-index: 7;
             overflow: hidden;
+            background-color: #e0e0e0;
           }
         }
 
         li {
           margin: 0 0 8px -8px;
           padding: 0 8px;
-          cursor: pointer;
           border-radius: 4px;
+          cursor: pointer;
           transition: 0.1s;
 
           &:hover {
-            background-color: rgba(0, 189, 211, 0.1);
             color: #00BDD3;
+            background-color: rgba(0, 189, 211, 0.1);
           }
 
           a {
-            transition: 0.1s;
             display: block;
             padding: 7px 0;
+            transition: 0.1s;
           }
 
           .active {
@@ -181,9 +180,9 @@
       }
 
       &::-webkit-scrollbar-thumb {
-        background-color: #ccc8c8;
-        border-radius: 20px;
         border: 3px solid #fff;
+        border-radius: 20px;
+        background-color: #ccc8c8;
       }
     }
   }

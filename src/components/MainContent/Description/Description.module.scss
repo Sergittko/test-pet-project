@@ -1,44 +1,40 @@
 .section_container {
-  margin: 60px auto 0;
+  position: relative;
+  display: flex;
   max-width: 1024px;
+  height: 650px;
+  margin: 60px auto 0;
   padding: 0 60px;
   box-sizing: border-box;
-  height: 650px;
-  position: relative;
   font-family: 'Nunito', sans-serif;
-  display: flex;
 
   .section_text {
-    // position: absolute;
-    height: max-content;
     max-width: 527px;
-    margin: auto 0 auto 60px;
-    top: 0;
-    bottom: 0;
+    height: max-content;
     margin: auto 0;
     color: rgba(0, 0, 0, 0.87);
 
     h1 {
       max-width: 670px !important;
-      font-weight: 400;
-      font-size: 40px;
-      line-height: 40px;
       margin: 0;
+      line-height: 40px;
+      font-size: 40px;
+      font-weight: 400;
     }
 
     p {
-      font-size: 16px;
-      line-height: 26px;
-      font-style: normal;
-      font-weight: 400;
       margin: 21px 0 32px;
+      line-height: 26px;
+      font-size: 16px;
+      font-weight: 400;
+      font-style: normal;
     }
   }
 }
 @media only screen and (max-width: 768px) {
   .section_container {
-    padding: 0 32px;
     height: 500px;
+    padding: 0 32px;
 
     .section_text {
       max-width: 424px;
@@ -47,8 +43,8 @@
 }
 @media only screen and (max-width: 360px) {
   .section_container {
-    padding: 0 16px;
     height: 469px;
+    padding: 0 16px;
 
     .section_text {
       max-width: 240px;

@@ -11,38 +11,38 @@
   position: fixed;
   z-index: 5;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   width: 100%;
   height: 60px;
-  background-color: #ffffff;
   box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.15), 0px 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
 }
 
 .main_section {
-  background-color: #f8f8f8;
-  width: 100%;
   position: relative;
+  width: 100%;
   background-image: url("./img/Footprint-467x177.svg");
-  background-size: auto;
   background-position: bottom right;
+  background-size: auto;
   background-repeat: no-repeat;
+  background-color: #f8f8f8;
 }
 
 .descriptionContainer {
   margin: 0;
   padding: 0;
-  background-color: #edecea;
   background-image: url("./img/Banner_photo.jpg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-color: #edecea;
 }
 
 @media only screen and (min-width: 2560px) {
   .main_section{
-    background-position: bottom 0 right 300px; ;
     background-image: url("./img/Footprint-972x177.svg");
+    background-position: bottom 0 right 300px; ;
   }
 }
 
@@ -51,8 +51,8 @@
     background-image: url("./img/Footprint-328x124.svg");
   }
   .descriptionContainer {
-    background-size: 205%;
     background-position: bottom;
+    background-size: 205%;
   }
 }
 
@@ -65,7 +65,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #00bdd3;
-  border-radius: 20px;
   border: 2px solid #f8f8f8;
+  border-radius: 20px;
+  background-color: #00bdd3;
 }

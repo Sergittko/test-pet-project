@@ -2,34 +2,34 @@
   max-width: 1024px;
   margin: 0 auto;
   padding: 87.5px 60px 100px;
-  text-align: center;
   box-sizing: border-box;
+  text-align: center;
   font-family: 'Nunito', sans-serif;
 
   h1 {
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 40px;
     margin: 0;
+    line-height: 40px;
+    font-size: 40px;
+    font-weight: 400;
   }
 
   h2 {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 28px;
     margin: 10px 0 32px;
+    line-height: 28px;
+    font-size: 22px;
+    font-weight: 400;
   }
 
   .registration_section {
-    margin: auto;
     width: 380px;
+    margin: auto;
     padding: 0 25px;
 
     .input_container {
+      width: 100%;
       display: flex;
       flex-direction: column;
       margin: auto;
-      width: 100%;
 
       .input_item {
         position: relative;
@@ -39,11 +39,11 @@
         input[type=text] {
           width: -webkit-fill-available;
           height: 26px;
-          background: #F8F8F8;
+          padding: 13px 16px;
           border: 1px solid #D0CFCF;
           border-radius: 4px;
           outline: none;
-          padding: 13px 16px;
+          background: #F8F8F8;
           font-size: 16px;
 
           &::placeholder {
@@ -57,32 +57,31 @@
 
         label {
           position: absolute;
-          cursor: text;
-          z-index: 2;
-          height: fit-content;
-          // top: 13px;
-          left: 10px;
           top: 0;
           bottom: 0;
+          left: 10px;
+          z-index: 2;
+          height: fit-content;
           margin: auto 0;
+          padding: 0 4px;
+          background: #f8f8f8;
+          color: #D0CFCF;
           font-size: 16px;
           font-weight: 400;
-          background: #f8f8f8;
-          padding: 0 4px;
-          color: #D0CFCF;
+          cursor: text;
           transition: all 0.3s ease;
         }
 
         input[type=text]:focus + label {
-          font-size: 12px;
           top: -54px;
           color: #00BDD3 !important;
+          font-size: 12px;
         }
 
         input[type=text]:not(:placeholder-shown) + label {
-          font-size: 12px;
           top: -54px !important;
           color: #D0CFCF;
+          font-size: 12px;
         }
 
         &:last-child {
@@ -93,8 +92,8 @@
           position: absolute;
           bottom: -20px;
           left: 15px;
-          font-size: 12px;
           color: red;
+          font-size: 12px;
         }
 
         span + input[type=text] {
@@ -125,33 +124,33 @@
 .modal {
   .modal_container {
     position: fixed;
-    left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 452px;
+    left: 50%;
+    z-index: 10;
     width: calc(100% - 32px);
+    max-width: 452px;
     height: 194px;
+    padding: 24px;
+    border-radius: 4px;
     box-sizing: border-box;
     text-align: left;
     background-color: #fff;
-    padding: 24px;
-    border-radius: 4px;
-    z-index: 10;
+    transform: translate(-50%, -50%);
 
     h1 {
       font-size: 22px;
     }
 
     p {
-      font-size: 16px;
       margin: 0;
+      font-size: 16px;
     }
 
     button {
-      margin: 0 24px 24px 0;
       position: absolute;
       right: 0;
       bottom: 0;
+      margin: 0 24px 24px 0;
     }
 
     a {
@@ -165,14 +164,14 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 7;
     display: block;
     width: 100%;
     height: 100%;
     margin: -60px 0 0;
     padding: 59px 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 7;
     overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 //===========================================================
@@ -184,9 +183,9 @@ $blue: #00BDD3;
 
   label {
     display: inline-block;
+    line-height: 26px;
     font-size: 16px;
     font-weight: 400;
-    line-height: 26px;
 
     span {
       display: inline-block;
@@ -195,8 +194,8 @@ $blue: #00BDD3;
 }
 
 .radio {
-  margin: 4px 0;
   display: inline-block;
+  margin: 4px 0;
   cursor: pointer;
 
   input {
@@ -207,10 +206,10 @@ $blue: #00BDD3;
     }
 
     & + span {
-      line-height: 22px;
-      height: 22px;
-      padding-left: 22px;
       position: relative;
+      height: 22px;
+      line-height: 22px;
+      padding-left: 22px;
 
       &:not(:empty) {
         padding-left: 20px + 12px;
@@ -219,13 +218,13 @@ $blue: #00BDD3;
       &:after,
       &:before {
         content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
         width: 18px;
         height: 18px;
-        display: block;
         border-radius: 50%;
-        left: 0;
-        top: 0;
-        position: absolute;
       }
 
       &:before {
@@ -237,8 +236,8 @@ $blue: #00BDD3;
       }
 
       &:after {
-        transform: scale(1);
         transition: transform 0.2s cubic-bezier(0, 1.43, 1, 1);
+        transform: scale(1);
       }
     }
 
@@ -248,8 +247,8 @@ $blue: #00BDD3;
       }
 
       &:after {
-        transform: scale(.5);
         transition: transform 0.3s ease;
+        transform: scale(.5);
       }
     }
 
@@ -286,18 +285,18 @@ $blue: #00BDD3;
 }
 
 .file_container {
+  position: relative;
+  height: 26px;
   display: flex !important;
-  margin: 48px 0 0 0 !important;
   flex-direction: row !important;
   justify-content: flex-start;
   align-items: center;
-  position: relative;
-  background: #F8F8F8;
+  margin: 48px 0 0 0 !important;
+  padding: 13px 0;
   border: #D0CFCF 1px solid;
   border-left: none;
   border-radius: 4px;
-  padding: 13px 0;
-  height: 26px;
+  background: #F8F8F8;
   transition: 0.2s ease;
 
   &:hover {
@@ -306,39 +305,39 @@ $blue: #00BDD3;
   }
 
   .input_file {
-    border: 1px solid #333;
-    background: #ccc;
-    color: #777;
-    width: 82px;
-    opacity: 0;
     position: absolute;
     right: 0;
+    width: 82px;
+    border: 1px solid #333;
+    opacity: 0;
+    color: #777;
+    background: #ccc;
   }
 
   .input_file_label {
-    padding: 13px 13px 13px 15px;
     height: 26px;
+    padding: 13px 13px 13px 15px;
     border: 1px solid rgba(0, 0, 0, 0.87);
     border-radius: 4px 0 0 4px;
     cursor: pointer;
   }
 
   .span_text {
-    padding: 14px 16px;
     width: 100%;
+    padding: 14px 16px;
     text-align: left;
-    color: #7E7E7E;
-    white-space: nowrap;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
+    color: #7E7E7E;
   }
 
   .input_error {
     position: absolute;
     bottom: -20px;
     left: 15px;
-    font-size: 12px;
     color: #CB3D40;
+    font-size: 12px;
   }
 }
 
@@ -350,8 +349,8 @@ $blue: #00BDD3;
     padding: 87.5px 32px 100px;
 
     .registration_section {
-      max-width: 380px;
       width: auto;
+      max-width: 380px;
       padding: 0;
     }
   }
