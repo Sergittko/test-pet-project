@@ -10,9 +10,6 @@
 *	Redux, react-redux
 *	React Final Form
 
-
-#### Made adaptive layout of application, used JSX and SCSS. In addition, I used LocalStorage to save user and task data.
-
 🌐Web site on GitHub Pages: https://sergittko.github.io/test-pet-project/. <br/>
 <h2 align="center">
  Preview:
